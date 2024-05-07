@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="h-screen font-mono">
+    <div class="h-3/5 bg-[#9FCEF4] relative">
+        <button id="button" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-[52px] bg-[#F7DCDC] text-[#A775AA] z-50 w-60 h-28 font-bold text-[40px]">
+            CLICK ME!
+        </button>
+        <button class="fixed top-[30px] right-[60px] rounded-[25px] bg-[#F7DCDC] text-[#A775AA] p-3 font-semibold text-[32px]">
+            About me
+        </button>
+        <list id="list" class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-[#A775AA] font-base text-[32px] list-none hidden z-50">
+            <li>Branding candle design</li>
+            <li>Anniversary book publication</li>
+            <li>Place & Space</li>
+            <li>Climate change</li>
+            <li>Advocate ！</li>
+            <li>Transition</li>
+            <li>Mix messages</li>
+            <li>Loop</li>
+        </list>
+        <div id="imageContainer">
+            <img src="./assets/white-star.svg" class="transformable fixed top-[92px] left-[350px] z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/blue-moon.svg" class="transformable fixed top-[58px] left-[376px] z-50"  data-transform="translate(1100px, 400px) rotate(-60deg)" style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/green-star.svg" class="transformable fixed top-[146px] left-[561px] z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/star-cup.svg" class="transformable fixed right-1 top-40 z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/pink-dots.svg" class="transformable fixed top-[120px] right-[480px] z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/stick.svg" class="transformable fixed left-[407px] top-[213px] z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/bowl.svg" class="transformable absolute bottom-0 left-[101px] z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/purple-circle-1.svg" class="transformable absolute bottom-[195px] left-[66px] z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/purple-circle-1.svg" class="transformable absolute bottom-[132px] left-[139px] z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/white-star.svg" class="transformable absolute bottom-[158px] left-[279px] z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/white-star.svg" class="transformable absolute bottom-[288px] left-[142px] z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/white-star.svg" class="transformable absolute bottom-[34px] left-[610px] z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/navy-square.svg" class="transformable absolute bottom-1 right-[268px] z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/navy-square.svg" class="transformable absolute bottom-[198px] right-[340px] z-50"  style="transition: transform 0.5s ease-in-out;">
+        </div>
+    </div>
+    <div class="h-2/5 bg-[#D0EAF7] relative">
+        <div id="imageContainer">
+            <img src="./assets/rotate-star.svg" class="transformable fixed top-[547px] right-[40px] z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/big-star.svg" class="transformable absolute top-0 left-11 z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/pink-circle.svg" class="transformable absolute bottom-[33px] left-[388px] z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/green-rectangle.svg" class="transformable absolute bottom-[131px] left-[336px] z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/blue-square.svg" class="transformable absolute top-1 right-[340px] z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/green-dots.svg" class="transformable absolute bottom-[49px] right-[116px] z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/rotate-star.svg" class="transformable absolute bottom-[34px] right-[377px] z-50"  style="transition: transform 0.5s ease-in-out;">
+        </div>
+    </div>
+
+    <audio id="clickSound" src="./assets/ding-sound.mp3"></audio>
+
+    <script>
+        const button = document.getElementById('button');
+        const list = document.getElementById('list');
+
+        button.addEventListener('click', () => {
+            if (button.textContent === 'APRIL') {
+                list.classList.remove('hidden');
+                button.classList.add('hidden');
+            }
+            button.textContent = 'APRIL'
+            button.classList.remove('text-[40px]');
+            button.classList.add('text-[64px]');
+        });
+
+        const container = document.getElementById('imageContainer');
+        const audio = document.getElementById('clickSound');
+
+        function toggleTransformation(event) {
+            const target = event.target;
+            if (target.classList.contains('transformable') && !target.classList.contains('transformed')) {
+                audio.play();
+                target.style.transform = target.getAttribute('data-transform');
+                target.classList.add('transformed');
+            }
+        }
+
+        // Add click event listener to the container
+        container.addEventListener('click', toggleTransformation);
+    </script>
+</body>
+</html>
