@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kite+One&display=swap" rel="stylesheet">
+</head>
+<body class="font-kite bg-[#FFFDD999]/[0.6] text-[#F98A09]">
+    <div class="flex justify-around py-20">
+        <div class="flex flex-col gap-6 w-1/3">
+            <button id="home" class="text-3xl text-left pb-20">APRIL</button>
+            <img src="./assets/advocate/image-1.png">
+            <img src="./assets/advocate/image-2.png">
+            <img src="./assets/advocate/image-3.png">
+            <img src="./assets/advocate/image-4.png">
+            <img src="./assets/advocate/image-5.png">
+        </div>
+        <div class="flex flex-col gap-6 w-1/3">
+            <div class="text-3xl flex justify-between pb-20">
+                <button id="project">Project</button>
+                <button id="about">About me</button>
+            </div>
+            <div>
+                <div class="text-5xl">Advocate!</div>
+                <div class="text-3xl pt-2">2023</div>
+            </div>
+            <div class="text-3xl py-8 leading-10">
+                This project is about raising awareness on a social issue through designing a series of campaigns. I've chosen to advocate for animal rights, specifically focusing on the topic of dog ear cropping. I've noticed that contemporary society's pursuit of personal aesthetic perfection has extended to pets, causing anxiety over their appearance as well.
+                <div class="pb-10"></div>
+                Many businesses, in an effort to make dogs look more handsome, will crop the ears of breeds like Dobermans into sharp triangles, or round the ears of other breeds to make them appear cuter. This practice is extremely cruel and unethical. It is an unhealthy and painful process for dogs. Through my series of designs, I hope to give a voice to dogs and draw public attention to this issue.
+            </div>
+            <img src="./assets/advocate/image-6.png">
+            <img src="./assets/advocate/image-7.png">
+            <img src="./assets/advocate/image-8.png">
+            <img src="./assets/advocate/image-9.png">
+        </div>
+    </div>
+
+    <script>
+        const homeButton = document.getElementById('home');
+        const projectButton = document.getElementById('project');
+        const aboutButton = document.getElementById('about');
+
+        homeButton.addEventListener('click', () => {
+            window.location.href = './index.html';
+        });
+
+        projectButton.addEventListener('click', () => {
+            window.location.href = './index.html?project';
+        });
+
+        aboutButton.addEventListener('click', () => {
+            window.location.href = './about.html';
+        });
+    </script>
+</body>
+</html>

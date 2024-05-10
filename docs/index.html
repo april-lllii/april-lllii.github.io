@@ -4,64 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kite+One&family=Kiwi+Maru&display=swap" rel="stylesheet">
 </head>
-<body class="h-screen font-mono">
+<body class="h-screen font-kite overflow-hidden">
     <div class="h-3/5 bg-[#9FCEF4] relative">
-        <button id="button" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-[52px] bg-[#F7DCDC] text-[#A775AA] z-50 w-60 h-28 font-bold text-[40px]">
+        <button id="button" class="hidden fixed font-kiwi top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-[52px] bg-[#F7DCDC] text-[#A775AA] z-20 w-60 h-28 font-bold text-[40px]">
             CLICK ME!
         </button>
-        <button class="fixed top-[30px] right-[60px] rounded-[25px] bg-[#F7DCDC] text-[#A775AA] p-3 font-semibold text-[32px]">
+        <button id="about" class="fixed top-[30px] right-[60px] rounded-[25px] bg-[#F7DCDC] text-[#A775AA] p-3 font-semibold text-[32px]">
             About me
         </button>
-        <list id="list" class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-[#A775AA] font-base text-[32px] list-none hidden z-50">
-            <li>Branding candle design</li>
-            <li>Anniversary book publication</li>
-            <li>Place & Space</li>
-            <li>Climate change</li>
-            <li>Advocate ！</li>
-            <li>Transition</li>
-            <li>Mix messages</li>
-            <li>Loop</li>
+        <list id="list" class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-[#A775AA] font-base text-[32px] list-none hidden z-20">
+            <li id="candle" class="cursor-pointer hover:text-[#E4A8A8]">Branding candle design</li>
+            <li id="anniversary" class="cursor-pointer hover:text-[#E4A8A8]">Anniversary book publication</li>
+            <li class="cursor-pointer hover:text-[#E4A8A8]">Place & Space</li>
+            <li id="climate" class="cursor-pointer hover:text-[#E4A8A8]">Climate change</li>
+            <li id="advocate" class="cursor-pointer hover:text-[#E4A8A8]">Advocate ！</li>
+            <li id="transition" class="cursor-pointer hover:text-[#E4A8A8]">Transition</li>
+            <li id="mix-messages" class="cursor-pointer hover:text-[#E4A8A8]">Mix messages</li>
+            <li id="loop" class="cursor-pointer hover:text-[#E4A8A8]">Loop</li>
         </list>
         <div id="imageContainer">
-            <img src="./assets/white-star.svg" class="transformable fixed top-[92px] left-[350px] z-50"  style="transition: transform 0.5s ease-in-out;">
-            <img src="./assets/blue-moon.svg" class="transformable fixed top-[58px] left-[376px] z-50"  data-transform="translate(1100px, 400px) rotate(-60deg)" style="transition: transform 0.5s ease-in-out;">
-            <img src="./assets/green-star.svg" class="transformable fixed top-[146px] left-[561px] z-50"  style="transition: transform 0.5s ease-in-out;">
-            <img src="./assets/star-cup.svg" class="transformable fixed right-1 top-40 z-50"  style="transition: transform 0.5s ease-in-out;">
-            <img src="./assets/pink-dots.svg" class="transformable fixed top-[120px] right-[480px] z-50"  style="transition: transform 0.5s ease-in-out;">
-            <img src="./assets/stick.svg" class="transformable fixed left-[407px] top-[213px] z-50"  style="transition: transform 0.5s ease-in-out;">
-            <img src="./assets/bowl.svg" class="transformable absolute bottom-0 left-[101px] z-50"  style="transition: transform 0.5s ease-in-out;">
-            <img src="./assets/purple-circle-1.svg" class="transformable absolute bottom-[195px] left-[66px] z-50"  style="transition: transform 0.5s ease-in-out;">
-            <img src="./assets/purple-circle-1.svg" class="transformable absolute bottom-[132px] left-[139px] z-50"  style="transition: transform 0.5s ease-in-out;">
-            <img src="./assets/white-star.svg" class="transformable absolute bottom-[158px] left-[279px] z-50"  style="transition: transform 0.5s ease-in-out;">
-            <img src="./assets/white-star.svg" class="transformable absolute bottom-[288px] left-[142px] z-50"  style="transition: transform 0.5s ease-in-out;">
-            <img src="./assets/white-star.svg" class="transformable absolute bottom-[34px] left-[610px] z-50"  style="transition: transform 0.5s ease-in-out;">
-            <img src="./assets/navy-square.svg" class="transformable absolute bottom-1 right-[268px] z-50"  style="transition: transform 0.5s ease-in-out;">
-            <img src="./assets/navy-square.svg" class="transformable absolute bottom-[198px] right-[340px] z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/white-star.svg" class="transformable absolute top-[92px] left-[350px] z-10" style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/blue-moon.svg" class="transformable absolute top-[58px] left-[376px] z-10"  data-transform="translate(1100px, 400px) rotate(-60deg)" style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/green-star.svg" class="transformable absolute top-[146px] left-[561px] z-10"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/star-cup.svg" class="transformable absolute right-1 top-40 z-10"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/pink-dots.svg" class="transformable absolute top-[120px] right-[480px] z-10"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/stick.svg" class="transformable absolute left-[407px] top-[213px] z-10"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/bowl.svg" class="transformable absolute bottom-0 left-[101px] z-10"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/purple-circle-1.svg" class="transformable absolute bottom-[195px] left-[66px] z-10"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/purple-circle-1.svg" class="transformable absolute bottom-[132px] left-[139px] z-10"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/white-star.svg" class="transformable absolute bottom-[158px] left-[279px] z-10"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/white-star.svg" class="transformable absolute bottom-[288px] left-[142px] z-10"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/white-star.svg" class="transformable absolute bottom-[34px] left-[610px] z-10"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/navy-square.svg" class="transformable absolute bottom-1 right-[268px] z-10"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/navy-square.svg" class="transformable absolute bottom-[198px] right-[340px] z-10"  style="transition: transform 0.5s ease-in-out;">
         </div>
     </div>
     <div class="h-2/5 bg-[#D0EAF7] relative">
         <div id="imageContainer">
-            <img src="./assets/rotate-star.svg" class="transformable fixed top-[547px] right-[40px] z-50"  style="transition: transform 0.5s ease-in-out;">
-            <img src="./assets/big-star.svg" class="transformable absolute top-0 left-11 z-50"  style="transition: transform 0.5s ease-in-out;">
-            <img src="./assets/pink-circle.svg" class="transformable absolute bottom-[33px] left-[388px] z-50"  style="transition: transform 0.5s ease-in-out;">
-            <img src="./assets/green-rectangle.svg" class="transformable absolute bottom-[131px] left-[336px] z-50"  style="transition: transform 0.5s ease-in-out;">
-            <img src="./assets/blue-square.svg" class="transformable absolute top-1 right-[340px] z-50"  style="transition: transform 0.5s ease-in-out;">
-            <img src="./assets/green-dots.svg" class="transformable absolute bottom-[49px] right-[116px] z-50"  style="transition: transform 0.5s ease-in-out;">
-            <img src="./assets/rotate-star.svg" class="transformable absolute bottom-[34px] right-[377px] z-50"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/rotate-star.svg" class="transformable fixed top-[547px] right-[40px] z-10"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/big-star.svg" class="transformable absolute top-0 left-11 z-10"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/pink-circle.svg" class="transformable absolute bottom-[33px] left-[388px] z-10"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/green-rectangle.svg" class="transformable absolute bottom-[131px] left-[336px] z-10"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/blue-square.svg" class="transformable absolute top-1 right-[340px] z-10"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/green-dots.svg" class="transformable absolute bottom-[49px] right-[116px] z-10"  style="transition: transform 0.5s ease-in-out;">
+            <img src="./assets/rotate-star.svg" class="transformable absolute bottom-[34px] right-[377px] z-10"  style="transition: transform 0.5s ease-in-out;">
         </div>
     </div>
 
     <audio id="clickSound" src="./assets/ding-sound.mp3"></audio>
 
     <script>
+        function addProjectParam() {
+            var currentUrl = new URL(window.location.href);
+            currentUrl.search = "project";
+            window.history.pushState({}, '', currentUrl);
+        }
+
         const button = document.getElementById('button');
         const list = document.getElementById('list');
 
         button.addEventListener('click', () => {
             if (button.textContent === 'APRIL') {
                 list.classList.remove('hidden');
-                button.classList.add('hidden');
+                button.style.transition = "top 0.5s ease, left 0.5s ease";
+                button.style.top = "90%";
+                button.style.left = "40%";
+                button.classList.add('cursor-default');
+                addProjectParam();
             }
             button.textContent = 'APRIL'
             button.classList.remove('text-[40px]');
@@ -80,8 +93,64 @@
             }
         }
 
-        // Add click event listener to the container
+        function checkProjectParam() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('project')) {
+                list.classList.remove('hidden');
+                button.style.top = "90%";
+                button.style.left = "40%";
+                button.textContent = 'APRIL'
+                button.classList.remove('text-[40px]');
+                button.classList.add('text-[64px]');
+                button.classList.add('cursor-default');
+                button.style.transition = "none";
+            }
+            button.classList.remove('hidden');
+        }
+
+        window.onload = checkProjectParam;
+
         container.addEventListener('click', toggleTransformation);
+
+        const about = document.getElementById('about');
+        about.addEventListener('click', () => {
+            window.location.href = './about.html';
+        });
+
+        const candle = document.getElementById('candle');
+        const anniversary = document.getElementById('anniversary');
+        const climate = document.getElementById('climate');
+        const advocate = document.getElementById('advocate');
+        const transition = document.getElementById('transition')
+        const mixMessages = document.getElementById('mix-messages');
+        const loop = document.getElementById('loop');
+        candle.addEventListener('click', () => {
+            window.location.href = './candle.html';
+        });
+
+        anniversary.addEventListener('click', () => {
+            window.location.href = './anniversary.html';
+        });
+
+        climate.addEventListener('click', () => {
+            window.location.href = './climate-change.html';
+        });
+
+        advocate.addEventListener('click', () => {
+            window.location.href = './advocate.html';
+        });
+
+        transition.addEventListener('click', () => {
+            window.location.href = './transition.html';
+        });
+
+        mixMessages.addEventListener('click', () => {
+            window.location.href = './mix-messages.html';
+        });
+
+        loop.addEventListener('click', () => {
+            window.location.href = './loop.html';
+        });
     </script>
 </body>
 </html>
