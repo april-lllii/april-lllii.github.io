@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kite+One&display=swap" rel="stylesheet">
+</head>
+<body class="font-kite bg-[#FFFDD999]/[0.6] text-[#F98A09]">
+    <div class="flex justify-around py-20">
+        <div class="flex flex-col gap-6 w-1/3">
+            <button id="home" class="text-3xl text-left pb-20">APRIL</button>
+            <img src="./assets/place-and-space/image-1.png">
+            <img src="./assets/place-and-space/image-2.png">
+            <img src="./assets/place-and-space/image-3.png">
+            <img src="./assets/place-and-space/image-4.png">
+        </div>
+        <div class="flex flex-col gap-6 w-1/3">
+            <div class="text-3xl flex justify-between pb-20">
+                <button id="project">Project</button>
+                <button id="about">About me</button>
+            </div>
+            <div>
+                <div class="text-5xl">Place & Space</div>
+                <div class="text-3xl pt-2">2023</div>
+            </div>
+            <div class="text-3xl py-8 leading-10">
+                The main color I use for the cover of the entire book is yellow, because this color ’s pillow used to be the longest pillow I had in my childhood. The yellow florals on the first layer are pillow, and the yellow wool cloth on the second layer serves as a layered foil.
+                <div class="pb-10"></div>
+                The content in the book is designed by some dream scenes associated with my dreams. The first page is a childhood dream of playing with friends, so the colors and decorations are very bright. The second page is a dream about love, so the theme is the three-dimensional woolen thread, and the scene told is the process of falling in love. The overall style of the third page is different from the previous . It was a nightmare. I fell into the whale pond in the aquarium and couldn’t escape for a long time, so I used a lot of messy line segments to express my inner mood at that time.
+                <div class="pb-10"></div>
+                Here is my <a href="https://youtu.be/KumEXA2sdrc" class="underline">video link</a> for my book.
+            </div>
+            <img src="./assets/place-and-space/image-5.png">
+            <img src="./assets/place-and-space/image-6.png">
+            <img src="./assets/place-and-space/image-7.png">
+        </div>
+    </div>
+
+    <script>
+        const homeButton = document.getElementById('home');
+        const projectButton = document.getElementById('project');
+        const aboutButton = document.getElementById('about');
+
+        homeButton.addEventListener('click', () => {
+            window.location.href = './index.html';
+        });
+
+        projectButton.addEventListener('click', () => {
+            window.location.href = './index.html?project';
+        });
+
+        aboutButton.addEventListener('click', () => {
+            window.location.href = './about.html';
+        });
+    </script>
+</body>
+</html>
