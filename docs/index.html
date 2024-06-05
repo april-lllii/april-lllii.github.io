@@ -16,15 +16,17 @@
         <button id="about" class="fixed top-[30px] right-[60px] rounded-[25px] bg-[#F7DCDC] text-[#A775AA] p-3 font-semibold text-[32px] z-50">
             About me
         </button>
-        <list id="list" class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-[#A775AA] font-base text-[32px] list-none hidden z-20">
-            <li id="candle" class="cursor-pointer hover:text-[#E4A8A8]">Branding candle design</li>
-            <li id="anniversary" class="cursor-pointer hover:text-[#E4A8A8]">Anniversary book publication</li>
-            <li id="place-and-space" class="cursor-pointer hover:text-[#E4A8A8]">Place & Space</li>
-            <li id="climate" class="cursor-pointer hover:text-[#E4A8A8]">Climate change</li>
-            <li id="advocate" class="cursor-pointer hover:text-[#E4A8A8]">Advocate ！</li>
-            <li id="transition" class="cursor-pointer hover:text-[#E4A8A8]">Transition</li>
-            <li id="mix-messages" class="cursor-pointer hover:text-[#E4A8A8]">Mix messages</li>
-            <li id="loop" class="cursor-pointer hover:text-[#E4A8A8]">Loop</li>
+        <list id="list" class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-[#A775AA] font-base text-3xl list-none hidden z-20">
+            <li id="candle" class="mb-1 cursor-pointer hover:text-[#E4A8A8]">Branding candle design</li>
+            <li id="anniversary" class="mb-1 cursor-pointer hover:text-[#E4A8A8]">Anniversary book publication</li>
+            <li id="place-and-space" class="mb-1 cursor-pointer hover:text-[#E4A8A8]">Place & Space</li>
+            <li id="climate" class="mb-1 cursor-pointer hover:text-[#E4A8A8]">Climate change</li>
+            <li id="advocate" class="mb-1 cursor-pointer hover:text-[#E4A8A8]">Advocate ！</li>
+            <li id="transition" class="mb-1 cursor-pointer hover:text-[#E4A8A8]">Transition</li>
+            <li id="mix-messages" class="mb-1 cursor-pointer hover:text-[#E4A8A8]">Mix messages</li>
+            <li id="loop" class="mb-1 cursor-pointer hover:text-[#E4A8A8]">Loop</li>
+            <li id="access-all-areas" class="mb-1 cursor-pointer hover:text-[#E4A8A8]">Access All Areas</li>
+            <li id="time-capsule" class="mb-1 cursor-pointer hover:text-[#E4A8A8]">Time Capsule</li>
         </list>
         <div id="imageContainer1">
             <img src="./assets/white-star.svg" class="transformable absolute top-[92px] left-[350px] z-10" data-transform="translate(80px, -2px)"style="transition: transform 0.5s ease-in-out;">
@@ -72,7 +74,7 @@
         const audio = document.getElementById('clickSound');
 
         button.addEventListener('click', () => {
-            if (button.textContent === 'APRIL') {
+            if (button.textContent === 'Zhengqin Li') {
                 list.classList.remove('hidden');
                 button.style.transition = "top 0.5s ease, left 0.5s ease";
                 button.style.top = "90%";
@@ -81,9 +83,9 @@
                 addProjectParam();
                 toggleAllTransformations();
             }
-            button.textContent = 'APRIL'
+            button.textContent = 'Zhengqin Li'
             button.classList.remove('text-[40px]');
-            button.classList.add('text-[64px]');
+            button.classList.add('text-4xl');
         });
 
         function toggleTransformation(event) {
@@ -113,9 +115,9 @@
                 list.classList.remove('hidden');
                 button.style.top = "90%";
                 button.style.left = "40%";
-                button.textContent = 'APRIL'
+                button.textContent = 'Zhengqin Li'
                 button.classList.remove('text-[40px]');
-                button.classList.add('text-[64px]');
+                button.classList.add('text-4xl');
                 button.classList.add('cursor-default');
                 button.style.transition = "none";
                 toggleAllTransformations();
@@ -141,6 +143,9 @@
         const transition = document.getElementById('transition')
         const mixMessages = document.getElementById('mix-messages');
         const loop = document.getElementById('loop');
+        const accessAllAreas = document.getElementById('access-all-areas');
+        const timeCapsule = document.getElementById('time-capsule');
+
         candle.addEventListener('click', () => {
             window.location.href = './candle.html';
         });
@@ -171,6 +176,14 @@
 
         loop.addEventListener('click', () => {
             window.location.href = './loop.html';
+        });
+
+        accessAllAreas.addEventListener('click', () => {
+            window.location.href = './access-all-areas.html';
+        });
+
+        timeCapsule.addEventListener('click', () => {
+            window.location.href = './time-capsule.html';
         });
     </script>
 </body>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kite+One&display=swap" rel="stylesheet">
+</head>
+<body class="font-kite bg-[#D9D9D9] text-black">
+    <div class="flex justify-around py-20">
+        <div class="flex flex-col gap-6 w-1/3">
+            <button id="home" class="text-3xl text-left pb-20">APRIL</button>
+            <img src="./assets/time-capsule/image-1.png">
+            <img src="./assets/time-capsule/image-2.png">
+            <img src="./assets/time-capsule/image-3.png">
+            <img src="./assets/time-capsule/image-4.png">
+            <img src="./assets/time-capsule/image-5.png">
+            <img src="./assets/time-capsule/image-6.png">
+            <img src="./assets/time-capsule/image-7.png">
+            <img src="./assets/time-capsule/image-8.png">
+            <img src="./assets/time-capsule/image-9.png">
+            <img src="./assets/time-capsule/image-10.png">
+            <img src="./assets/time-capsule/image-11.png">
+            <img src="./assets/time-capsule/image-12.png">
+            <img src="./assets/time-capsule/image-13.png">
+        </div>
+        <div class="flex flex-col gap-6 w-1/3">
+            <div class="text-3xl flex justify-between pb-20">
+                <button id="project">Project</button>
+                <button id="about">About me</button>
+            </div>
+            <div>
+                <div class="text-5xl">Time Capsule</div>
+                <div class="text-3xl pt-2">2024</div>
+            </div>
+            <div class="text-3xl py-8 leading-10">
+                In the electronic era we live at, even the method of payment has transformed from physical cash transactions to mobile payments, where everyone merely needs a phone when stepping out. Wallets and paper money have disappeared in this era, gradually becoming fossil-like relics. The memories once specifically associated with wallets have also vanished; a wallet used to carry not just money, but also many traces of life, such as important photos and ticket stubs. Now, all memories are digital, and people can no longer touch these paper mementos.
+            </div>
+            <img src="./assets/time-capsule/image-14.png">
+            <img src="./assets/time-capsule/image-15.png">
+            <img src="./assets/time-capsule/image-16.png">
+            <img src="./assets/time-capsule/image-17.png">
+            <img src="./assets/time-capsule/image-18.png">
+            <img src="./assets/time-capsule/image-19.png">
+            <img src="./assets/time-capsule/image-20.png">
+            <img src="./assets/time-capsule/image-21.png">
+            <img src="./assets/time-capsule/image-22.png">
+            <img src="./assets/time-capsule/image-23.png">
+            <img src="./assets/time-capsule/image-24.png">
+            <img src="./assets/time-capsule/image-25.png">
+            <img src="./assets/time-capsule/image-26.png">
+            <img src="./assets/time-capsule/image-27.png">
+        </div>
+    </div>
+
+    <script>
+        const homeButton = document.getElementById('home');
+        const projectButton = document.getElementById('project');
+        const aboutButton = document.getElementById('about');
+
+        homeButton.addEventListener('click', () => {
+            window.location.href = './index.html';
+        });
+
+        projectButton.addEventListener('click', () => {
+            window.location.href = './index.html?project';
+        });
+
+        aboutButton.addEventListener('click', () => {
+            window.location.href = './about.html';
+        });
+    </script>
+</body>
+</html>
