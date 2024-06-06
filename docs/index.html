@@ -7,6 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kite+One&family=Kiwi+Maru&display=swap" rel="stylesheet">
+    <script>
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        if (isMobile()) {
+            window.location.href = "mobile-not-supported.html"; // Redirect to a page that explains mobile is not supported
+        }
+    </script>
 </head>
 <body class="h-screen font-kite overflow-hidden">
     <div class="h-3/5 bg-[#9FCEF4] relative">
